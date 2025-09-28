@@ -1,0 +1,26 @@
+{
+  "name": "money-management-frontend",
+  "version": 2,
+  "builds": [
+    {
+      "src": "apps/frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/apps/frontend/dist/index.html"
+    }
+  ],
+  "buildCommand": "cd apps/frontend && npm run build",
+  "outputDirectory": "apps/frontend/dist",
+  "installCommand": "npm install",
+  "framework": "vite"
+}
