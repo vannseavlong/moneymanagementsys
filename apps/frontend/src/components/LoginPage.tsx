@@ -28,7 +28,7 @@ const LoginPage: React.FC = () => {
           </CardDescription>
           <div className="flex justify-center mt-4">
             <img 
-              src="/src/assets/MMMS Logo.png" 
+              src="/MMMS-Logo.png" 
               alt="MMMS Logo" 
               className="w-16 h-16"
               onError={(e) => {
