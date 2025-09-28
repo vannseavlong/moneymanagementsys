@@ -1,0 +1,34 @@
+{
+  "name": "mmms-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monthly Money Management System - Full Stack Application",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean",
+    "type-check": "turbo run type-check",
+    "build:backend": "cd apps/backend && npm run build",
+    "start:backend": "cd apps/backend && npm start",
+    "build:frontend": "cd apps/frontend && npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "turbo": "^1.10.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "packageManager": "npm@8.19.0",
+  "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
+    "zod": "^4.1.11"
+  }
+}

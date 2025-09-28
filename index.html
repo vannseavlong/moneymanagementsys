@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Management System</title>
+    <link rel="stylesheet" href="./Fold/style.css">
+
+    <link rel="icon" href="./Fold/MMMS Logo.png">
+</head>
+<body>
+    <div class="container">
+        <h1>Monthly Money Management</h1>
+        
+        <!-- Total Money Input -->
+        <label for="totalMoney">Total Money ($):</label>
+        <input type="number" id="totalMoney" placeholder="Enter total money" required>
+
+        <!-- Month Input -->
+        <label for="month">Month:</label>
+        <input type="month" id="month" required>
+
+        <!-- Chat ID Input -->
+        <label for="chatId">Telegram Chat ID:</label>
+        <input type="text" id="chatId" placeholder="Enter your Telegram Chat ID" required>
+
+        <!-- Spending List -->
+        <div id="spendingList">
+            <label>Spending Items:</label>
+            <div class="spending-item">
+                <input type="text" placeholder="Item" class="item" required>
+                <input type="number" placeholder="Amount ($)" class="amount" required>
+            </div>
+        </div>
+        
+        <!-- Add Item Button -->
+        <button id="addItem">Add Item</button>
+
+        <!-- Remaining Money Display -->
+        <h3>Remaining Money: <span id="remainingMoney">0</span>$</h3>
+
+        <!-- Submit to Telegram Button -->
+        <button id="sendTelegram">Send to Telegram</button>
+    </div>
+
+    <script src="./Fold/script.js"></script>
+</body>
+</html>
